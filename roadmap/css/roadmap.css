@@ -2,10 +2,17 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 .roadmap {
   background-image: url("https://login.cybersoft.edu.vn/static/media/background.b697469b.png");
   padding: 30px;
+}
+.roadmap__big-screen {
+  display: none;
+}
+.roadmap__small-screen {
+  display: block;
 }
 .roadmap__container {
   width: 100%;
@@ -37,8 +44,9 @@
   box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.02);
 }
 .roadmap__item {
-  width: 11%;
+  width: 10vw;
   height: 350px;
+  /* border: 1px solid red; */
 }
 .item__title {
   color: white;
@@ -57,6 +65,8 @@
   flex-direction: column;
   justify-content: flex-end;
   padding: 10px;
+  text-align: left;
+  font-size: 14pxs;
 }
 .item__img {
   display: flex;
@@ -66,8 +76,8 @@
 /* line */
 
 .item__img .img__bg {
-  width: 100px;
-  height: 100px;
+  width: 8.5vw;
+  height: 8.5vw;
 
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   background-size: cover;
@@ -92,4 +102,39 @@
 
 .item__up .item__text {
   justify-content: flex-start;
+}
+
+.item__text i {
+  color: #4b7be5;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+/* start responsvie */
+
+@media screen and (min-width: 992px) {
+  .roadmap__big-screen {
+    display: block;
+  }
+  .roadmap__small-screen {
+    display: none;
+  }
+}
+.roadmap__slider {
+  display: block;
+  width: 100%;
+}
+
+.roadmap__slider .slider__item {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.slider__item .roadmap__item {
+  width: 20vw;
+}
+.slider__item .roadmap__item .img__bg {
+  width: 15vw;
+  height: 15vw;
 }

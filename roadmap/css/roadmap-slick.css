@@ -1,0 +1,21 @@
+.roadmap__small-screen .slick-prev {
+  z-index: 10;
+  left: auto;
+  top: auto;
+  bottom: -40px !important;
+  right: 50px !important;
+}
+.roadmap__small-screen .slick-next {
+  z-index: 10;
+  left: auto;
+  top: auto;
+  bottom: -40px !important;
+  right: 15px !important;
+}
+
+.roadmap__small-screen .slick-prev::before,
+.roadmap__small-screen .slick-next::before {
+  color: #222260;
+  opacity: 1;
+  font-size: 30px;
+}
